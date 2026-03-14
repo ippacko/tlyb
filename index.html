@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Luca Yeager Band — psych-rock from NYC. Shows, music, news, and contact." />
+  <title>The Luca Yeager Band</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="The Luca Yeager Band">
+        <img src="logo.png" alt="The Luca Yeager Band logo" class="logo" />
+        <span class="brand-text">The Luca Yeager Band</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#shows">Shows</a>
+        <a href="#music">Music</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="socials" aria-label="Social links">
+        <a href="https://www.instagram.com/thelucayeagerband/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://open.spotify.com/artist/4KXOsKCBdsapgoRj4yFKe5" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+          <img src="spotify.png" alt="Spotify" />
+        </a>
+        <a href="https://music.apple.com/us/artist/the-luca-yeager-band/1728310462" target="_blank" rel="noopener noreferrer" aria-label="Apple Music">
+          <img src="music.png" alt="Apple Music" />
+        </a>
+        <a href="https://www.tiktok.com/@thelucayeagerband" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <img src="tiktok.png" alt="TikTok" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <h1 class="hero__title">The Luca Yeager Band</h1>
+        <p class="hero__subtitle">Modern psych‑rock for the New York stage.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#shows">Next shows</a>
+          <a class="btn btn--ghost" href="#music">Listen</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel panel--dark fade-in">
+      <div class="panel__inner">
+        <div class="panel__media">
+          <img src="https://i.imgur.com/fRrAT46.png" alt="The Luca Yeager Band performing live" />
+        </div>
+        <div class="panel__content">
+          <h2>About</h2>
+          <p>
+            The Luca Yeager Band is hitting the stage in New York City. Led by guitarist
+            and songwriter Luca Yeager, the group delivers a raw, immersive sound rooted in
+            psychedelic rock and electric blues.
+          </p>
+          <p>
+            A graduate of NYU’s songwriting program, Luca blends technical craft with
+            emotional depth, shaping music that’s built to draw you in. The band’s lineup
+            features fellow NYU music grads, each bringing their own deep pockets of
+            influence. Together, they’ve crafted a live experience that’s both hypnotic
+            and high‑voltage.
+          </p>
+          <p>
+            Their debut album, <strong>The Free Trial</strong>, is a soulful tribute to the
+            sounds that shaped them — layered with fuzzed‑out guitars, shifting rhythms,
+            and lyrical fire. Onstage, they’re tight, expressive, and unpredictable.
+            This is a band built for live performance, and they’re out to make every show an
+            experience.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows" class="panel panel--light fade-in">
+      <div class="panel__header">
+        <h2>Shows</h2>
+        <p>Upcoming dates and past highlights. Tap or swipe to browse.</p>
+      </div>
+
+      <div class="carousel" aria-label="Shows carousel">
+        <button class="carousel__button carousel__button--prev" aria-label="Previous show">❮</button>
+
+        <div class="carousel__viewport">
+          <ul class="carousel__track">
+            <li class="carousel__slide" data-date="April 21st, 2025" data-venue="Bowery Electric">
+              <div class="slide__content">
+                <h3>Upcoming</h3>
+                <p class="slide__date">April 21st, 2025</p>
+                <p class="slide__venue">Bowery Electric</p>
+                <a class="btn btn--small" href="https://www.theboweryelectric.com/tm-event/sophia-rogers-luca-yeager-thenewapproach-nat-brennan/" target="_blank" rel="noopener noreferrer">Get tickets</a>
+              </div>
+            </li>
+            <li class="carousel__slide" data-date="Dec 15th, 2024" data-venue="The Delancey">
+              <div class="slide__content">
+                <h3>Past show</h3>
+                <p class="slide__date">December 15th, 2024</p>
+                <p class="slide__venue">The Delancey</p>
+              </div>
+            </li>
+            <li class="carousel__slide" data-date="Feb 28th, 2025" data-venue="The Delancey">
+              <div class="slide__content">
+                <h3>Past show</h3>
+                <p class="slide__date">February 28th, 2025</p>
+                <p class="slide__venue">The Delancey</p>
+              </div>
+            </li>
+            <li class="carousel__slide" data-date="May 10th, 2024" data-venue="Nublu">
+              <div class="slide__content">
+                <h3>Past show</h3>
+                <p class="slide__date">May 10th, 2024</p>
+                <p class="slide__venue">Nublu</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="carousel__button carousel__button--next" aria-label="Next show">❯</button>
+
+        <div class="carousel__nav" aria-label="Show navigation"></div>
+      </div>
+    </section>
+
+    <section id="music" class="panel panel--dark fade-in">
+      <div class="panel__header">
+        <h2>Music</h2>
+        <p>Stream it where you listen. Tap the icons to jump into the catalog.</p>
+      </div>
+
+      <div class="music-grid">
+        <a class="music-card" href="https://open.spotify.com/artist/4KXOsKCBdsapgoRj4yFKe5" target="_blank" rel="noopener noreferrer">
+          <img src="spotify.png" alt="Spotify" />
+          <span>Spotify</span>
+        </a>
+        <a class="music-card" href="https://music.apple.com/us/artist/the-luca-yeager-band/1728310462" target="_blank" rel="noopener noreferrer">
+          <img src="music.png" alt="Apple Music" />
+          <span>Apple Music</span>
+        </a>
+        <a class="music-card" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <img src="https://i.imgur.com/G8Q6YKq.jpeg" alt="YouTube" />
+          <span>YouTube</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="panel panel--light fade-in">
+      <div class="panel__header">
+        <h2>Contact</h2>
+        <p>Reach out for booking, press, or just to say hey.</p>
+      </div>
+
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Your name" required autocomplete="name" />
+        </div>
+        <div class="form-row">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-row">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5" placeholder="What can we help you with?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send message</button>
+        <p id="contact-status" class="contact-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 The Luca Yeager Band — All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

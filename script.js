@@ -55,15 +55,15 @@ function setupParallaxLogo() {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion) {
-    parallaxLogo.style.transform = 'translate3d(-50%, 0, 0)';
+    parallaxLogo.style.setProperty('--parallax-y', '0px');
     return;
   }
 
   let ticking = false;
 
   const update = () => {
-    const y = window.scrollY * 0.18;
-    parallaxLogo.style.transform = `translate3d(-50%, ${y}px, 0)`;
+    const y = window.scrollY * 0.08;
+    parallaxLogo.style.setProperty('--parallax-y', `${y}px`);
     ticking = false;
   };
 

@@ -25,10 +25,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font);
-  background: radial-gradient(circle at 10% 8%, rgba(255, 76, 110, 0.45), transparent 42%),
-    radial-gradient(circle at 88% 82%, rgba(109, 242, 255, 0.42), transparent 46%),
-    conic-gradient(from 220deg at 50% 50%, rgba(255, 111, 0, 0.15), rgba(139, 92, 246, 0.14), rgba(0, 255, 255, 0.1), rgba(255, 111, 0, 0.15)),
-    var(--bg);
+  background: #9b4f14;
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
@@ -41,17 +38,13 @@ body::before {
   pointer-events: none;
   z-index: 0;
   opacity: 1;
-  background-image: radial-gradient(circle at 20% 24%, rgba(255, 0, 128, 0.6), transparent 34%),
-    radial-gradient(circle at 83% 74%, rgba(0, 255, 255, 0.55), transparent 38%),
-    radial-gradient(circle at 55% 46%, rgba(255, 231, 92, 0.4), transparent 32%),
-    radial-gradient(circle at 42% 78%, rgba(157, 78, 221, 0.45), transparent 31%),
-    url("orange logo.png"),
+  background-image: url("orange logo.png"),
     url("golden logo.png");
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 240px auto, 240px auto;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
-  background-position: center, center, center, center, 0 0, 120px 0;
-  background-blend-mode: screen, color-dodge, overlay, hard-light, normal, normal;
-  filter: hue-rotate(38deg) saturate(2.5) contrast(1.2);
+  background-size: 240px auto, 240px auto;
+  background-repeat: repeat, repeat;
+  background-position: 0 0, 120px 0;
+  background-blend-mode: normal, normal;
+  filter: none;
 }
 
 body::after {

@@ -47,6 +47,42 @@ function setupCarousel() {
   window.addEventListener('resize', () => updateCarousel(currentIndex));
 }
 
+/* Background logo parallax */
+const parallaxLogo = document.querySelector('.parallax-logo');
+
+function setupParallaxLogo() {
+  if (!parallaxLogo) return;
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    parallaxLogo.style.transform = 'translate3d(-50%, 0, 0)';
+    return;
+  }
+
+  let ticking = false;
+
+  const update = () => {
+    const y = window.scrollY * 0.18;
+    parallaxLogo.style.transform = `translate3d(-50%, ${y}px, 0)`;
+    ticking = false;
+  };
+
+  update();
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  window.addEventListener('resize', update);
+}
+
 /* Mobile nav toggle */
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
@@ -114,3 +150,4 @@ if (contactForm && contactStatus) {
 }
 
 setupCarousel();
+setupParallaxLogo();

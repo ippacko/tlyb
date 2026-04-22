@@ -38,12 +38,12 @@ body::before {
   pointer-events: none;
   z-index: 0;
   opacity: 1;
-  background-image: url("orange logo.png"),
-    url("golden logo.png");
-  background-size: 240px auto, 240px auto;
+  background-image: url("golden logo.png"),
+    url("orange logo.png");
+  background-size: 220px auto, 300px auto;
   background-repeat: repeat, repeat;
-  background-position: 0 0, 120px 0;
-  background-blend-mode: normal, normal;
+  background-position: 0 0, 140px 0;
+  background-blend-mode: normal, soft-light;
   filter: none;
 }
 

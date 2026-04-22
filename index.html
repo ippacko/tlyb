@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260422-7" />
+  <link rel="stylesheet" href="style.css?v=20260422-8" />
 </head>
 <body>
   <img src="logo.png" alt="" class="parallax-logo" aria-hidden="true" />
@@ -161,12 +161,13 @@
     </section>
 
     <section id="credits" class="panel panel--dark fade-in">
-      <div class="panel__header">
-        <h2>Credits</h2>
-        <p>Selected production and performance credits.</p>
-      </div>
+      <details class="credits-dropdown">
+        <summary class="credits-summary">
+          <span class="credits-summary__title">Credits</span>
+          <span class="credits-summary__meta">Selected production and performance credits</span>
+        </summary>
 
-      <div class="credits-list">
+        <div class="credits-list">
         <div class="credits-item">
           <div class="credits-info">
             <h3>"Oh Lord, Turn me Into a Tree"</h3>
@@ -221,7 +222,17 @@
           </div>
           <a href="https://open.spotify.com/album/3WSGtd09F3aMZKKVjt7zdJ?si=5ef83392c3b9483a" target="_blank" rel="noopener noreferrer" class="credits-link">Listen on Spotify ↗</a>
         </div>
+
+        <div class="credits-item">
+          <div class="credits-info">
+            <h3>"And I Wait"</h3>
+            <p class="credits-artist">MARI</p>
+            <p class="credits-role">Lead Guitar</p>
+          </div>
+          <a href="https://open.spotify.com/track/4WZM25ur41VLgffjsBzFSx?si=4fc1de65720843d5" target="_blank" rel="noopener noreferrer" class="credits-link">Listen on Spotify ↗</a>
+        </div>
       </div>
+      </details>
     </section>
 
     <section id="press" class="panel panel--dark fade-in">

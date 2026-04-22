@@ -735,19 +735,18 @@ textarea {
 .credits-list {
   max-width: var(--max-width);
   margin: 0 auto;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
   opacity: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.1rem;
-  transition: max-height 420ms ease, opacity 260ms ease, margin-top 260ms ease;
+  transition: opacity 260ms ease, margin-top 260ms ease;
 }
 
 .credits-dropdown[open] .credits-list {
   margin-top: 1rem;
-  max-height: 2200px;
   opacity: 1;
 }
 

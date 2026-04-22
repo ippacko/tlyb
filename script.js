@@ -8,13 +8,13 @@ const nav = document.querySelector('.carousel__nav');
 let currentIndex = 0;
 
 function updateCarousel(index) {
-  if (!track) return;
+  if (!track || slides.length === 0) return;
 
-  currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+  currentIndex = ((index % slides.length) + slides.length) % slides.length;
   const offset = slides[currentIndex].getBoundingClientRect().width * currentIndex;
   track.style.transform = `translateX(-${offset}px)`;
 
-  const indicators = Array.from(nav.children);
+  const indicators = Array.from(nav?.children || []);
   indicators.forEach((dot, i) => {
     dot.classList.toggle('is-selected', i === currentIndex);
   });
@@ -41,6 +41,7 @@ if (prevButton) {
 }
 
 function setupCarousel() {
+  if (!track || slides.length === 0) return;
   buildNav();
   updateCarousel(0);
   window.addEventListener('resize', () => updateCarousel(currentIndex));

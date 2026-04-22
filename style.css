@@ -391,7 +391,6 @@ textarea {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  min-height: 600px;
 }
 
 .carousel__track {
@@ -404,11 +403,18 @@ textarea {
 
 .carousel__slide {
   min-width: 100%;
-  padding: 3rem 2rem;
   display: grid;
   place-items: center;
-  background: url("ahetobleh.png") center 30%/contain no-repeat;
+  padding: 1rem;
+  min-height: 400px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+}
+
+.carousel__slide {
+  background-image: url("ahetobleh.png");
 }
 
 .carousel__slide:nth-child(2) {

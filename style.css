@@ -244,8 +244,9 @@ textarea {
   position: relative;
   min-height: 30vh;
   padding: 2rem 1.5rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border: none;
 }
@@ -255,6 +256,7 @@ textarea {
 }
 
 .hero__inner {
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -274,6 +276,7 @@ textarea {
   height: auto;
   filter: brightness(0) invert(1);
   max-width: 200px;
+  display: block;
 }
 
 .hero__title {
@@ -867,12 +870,12 @@ textarea {
 
 @media (max-width: 840px) {
   .hero {
-    min-height: 56vh;
-    padding: 6.25rem 1.25rem 4rem;
+    min-height: 25vh;
+    padding: 3rem 1.5rem;
   }
 
   .hero__inner {
-    padding: 1.25rem 1rem;
+    width: 100%;
   }
 
   .panel__inner {

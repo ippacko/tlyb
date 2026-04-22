@@ -49,7 +49,7 @@ body::before {
     url("golden logo.png");
   background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 240px auto, 240px auto;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat;
-  background-position: center, center, center, center, 0 0, 120px 120px;
+  background-position: center, center, center, center, 0 0, 120px 0;
   background-blend-mode: screen, color-dodge, overlay, hard-light, multiply, screen;
   filter: hue-rotate(38deg) saturate(2.5) contrast(1.2);
 }
@@ -261,7 +261,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(5, 5, 10, 0.06), rgba(5, 5, 10, 0.32));
+  background: none;
   pointer-events: none;
 }
 
@@ -339,11 +339,11 @@ textarea {
 }
 
 .panel--dark {
-  background: rgba(255, 255, 255, 0.04);
+  background: transparent;
 }
 
 .panel--light {
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
 }
 
 .panel__inner {

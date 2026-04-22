@@ -407,7 +407,7 @@ textarea {
   padding: 3rem 2rem;
   display: grid;
   place-items: center;
-  background: url("ahetobleh.png") center/contain no-repeat;
+  background: url("ahetobleh.png") center 30%/contain no-repeat;
   position: relative;
 }
 

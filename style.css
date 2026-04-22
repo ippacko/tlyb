@@ -172,8 +172,9 @@ textarea {
 }
 
 .hero__logo {
-  width: min(88vw, 420px);
+  width: min(84vw, 360px);
   max-width: 100%;
+  max-height: 120px;
   height: auto;
   display: block;
   margin: 0 auto;

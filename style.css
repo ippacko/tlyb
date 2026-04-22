@@ -407,7 +407,7 @@ textarea {
   display: grid;
   place-items: center;
   background: linear-gradient(180deg, rgba(10, 10, 18, 0.9), rgba(0, 0, 0, 0.7)),
-    url("ahetobleh.png") center/cover no-repeat;
+    url("ahetobleh.png") center 30%/cover no-repeat;
   position: relative;
 }
 
@@ -558,6 +558,41 @@ textarea {
 .music-card:hover {
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.press-quote {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.press-quote blockquote {
+  margin: 0;
+  padding: 2rem 1.5rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}
+
+.press-quote blockquote p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.press-quote blockquote footer {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.press-quote blockquote footer cite a {
+  color: var(--accent-2);
+  transition: color 150ms ease;
+}
+
+.press-quote blockquote footer cite a:hover,
+.press-quote blockquote footer cite a:focus-visible {
+  color: var(--accent);
 }
 
 .contact-form {

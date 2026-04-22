@@ -45,11 +45,15 @@ body::before {
     radial-gradient(circle at 83% 74%, rgba(0, 255, 255, 0.55), transparent 38%),
     radial-gradient(circle at 55% 46%, rgba(255, 231, 92, 0.4), transparent 32%),
     radial-gradient(circle at 42% 78%, rgba(157, 78, 221, 0.45), transparent 31%),
+    linear-gradient(rgba(255, 120, 0, 0.95), rgba(255, 120, 0, 0.95)),
+    url("logo.png"),
+    linear-gradient(rgba(255, 205, 65, 0.9), rgba(255, 205, 65, 0.9)),
     url("logo.png");
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 240px auto;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-  background-position: center, center, center, center, 0 0;
-  background-blend-mode: screen, color-dodge, overlay, hard-light, normal;
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 240px auto, 240px auto, 240px auto,
+    240px auto;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat, repeat, repeat;
+  background-position: center, center, center, center, 0 0, 0 0, 120px 120px, 120px 120px;
+  background-blend-mode: screen, color-dodge, overlay, hard-light, color, multiply, color, multiply;
   filter: hue-rotate(38deg) saturate(2.5) contrast(1.2);
 }
 

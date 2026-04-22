@@ -405,9 +405,9 @@ textarea {
   min-width: 100%;
   display: grid;
   place-items: center;
-  padding: 1rem;
-  min-height: 400px;
-  background-size: contain;
+  padding: 0;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;

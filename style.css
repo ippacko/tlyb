@@ -417,20 +417,19 @@ textarea {
 .credits-dropdown::before {
   content: "";
   position: absolute;
-  inset: -24px;
+  inset: -12px;
   z-index: -1;
   pointer-events: none;
-  background: rgba(7, 8, 14, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px) saturate(1.05);
-  -webkit-backdrop-filter: blur(10px) saturate(1.05);
-  clip-path: polygon(2% 8%, 8% 3%, 17% 6%, 27% 2%, 38% 5%, 49% 1%, 61% 4%, 73% 2%, 84% 6%, 95% 3%,
-      98% 13%, 96% 24%, 99% 36%, 95% 48%, 98% 61%, 94% 73%, 97% 86%, 91% 95%, 79% 97%, 68% 94%,
-      56% 98%, 45% 95%, 33% 97%, 22% 93%, 11% 96%, 3% 90%, 1% 78%, 4% 66%, 1% 53%, 5% 42%,
-      2% 29%, 6% 18%);
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 45%, rgba(0, 0, 0, 0.35) 70%, transparent 92%);
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 45%, rgba(0, 0, 0, 0.35) 70%, transparent 92%);
-  filter: blur(6px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(8, 8, 12, 0.58);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.08) 0 1px, transparent 1px 2px),
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.06) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 65%, rgba(0, 0, 0, 0.16) 0 1px, transparent 2px);
+  background-size: 4px 4px, 3px 3px, 11px 11px, 13px 13px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
 }
 
 .panel__inner::after,
@@ -441,13 +440,7 @@ textarea {
 .press-quote::after,
 .contact-form::after,
 .credits-dropdown::after {
-  content: "";
-  position: absolute;
-  inset: -46px;
-  z-index: -2;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(7, 8, 14, 0.2) 0%, rgba(7, 8, 14, 0.07) 48%, transparent 96%);
-  filter: blur(22px);
+  content: none;
 }
 
 .fade-in {

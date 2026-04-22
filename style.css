@@ -256,7 +256,7 @@ textarea {
 }
 
 .hero__inner {
-  width: 100%;
+  width: 70%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -392,7 +392,6 @@ textarea {
 
 .panel__inner,
 .panel__header,
-.hero__inner,
 .carousel,
 .music-grid,
 .press-quote,
@@ -404,7 +403,6 @@ textarea {
 
 .panel__inner::before,
 .panel__header::before,
-.hero__inner::before,
 .carousel::before,
 .music-grid::before,
 .press-quote::before,
@@ -429,7 +427,6 @@ textarea {
 
 .panel__inner::after,
 .panel__header::after,
-.hero__inner::after,
 .carousel::after,
 .music-grid::after,
 .press-quote::after,

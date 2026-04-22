@@ -172,11 +172,12 @@ textarea {
 }
 
 .hero__logo {
-  width: min(100%, 700px);
+  width: min(88vw, 420px);
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  filter: invert(1);
+  filter: brightness(0) invert(1);
 }
 
 .hero__subtitle {
@@ -367,6 +368,7 @@ textarea {
 .carousel__button {
   position: absolute;
   top: 50%;
+  z-index: 2;
   transform: translateY(-50%);
   width: 46px;
   height: 46px;

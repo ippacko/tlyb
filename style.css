@@ -404,7 +404,7 @@ textarea {
 
 .carousel__slide {
   min-width: 100%;
-  padding: 8rem 2rem;
+  padding: 3rem 2rem;
   display: grid;
   place-items: center;
   background: url("ahetobleh.png") center/contain no-repeat;

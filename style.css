@@ -33,20 +33,28 @@ body {
   line-height: 1.6;
 }
 
-.parallax-logo {
+body::before {
+  content: "";
   position: fixed;
-  top: 50%;
-  left: 50%;
-  height: 114vh;
-  width: auto;
-  max-width: none;
-  max-height: 114vh;
-  transform: translate3d(-50%, -50%, 0);
-  filter: brightness(0) saturate(100%) invert(1) contrast(1.15);
-  opacity: 0.12;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
-  will-change: transform;
+  opacity: 0.2;
+  background-image: radial-gradient(circle at 20% 25%, rgba(255, 75, 110, 0.35), transparent 38%),
+    radial-gradient(circle at 85% 70%, rgba(109, 242, 255, 0.35), transparent 42%),
+    radial-gradient(circle at 55% 45%, rgba(255, 214, 98, 0.2), transparent 35%),
+    url("logo.png");
+  background-size: 100% 100%, 100% 100%, 100% 100%, 320px auto;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-position: center, center, center, 0 0;
+  background-blend-mode: screen, screen, overlay, normal;
+  filter: hue-rotate(22deg) saturate(1.7) contrast(1.08);
+}
+
+.parallax-logo {
+  display: none;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .site-header,
@@ -600,6 +608,7 @@ textarea {
 .credits-dropdown {
   max-width: var(--max-width);
   margin: 0 auto;
+  user-select: none;
 }
 
 .credits-summary {
@@ -613,6 +622,14 @@ textarea {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  transition: background 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.credits-summary:hover,
+.credits-summary:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(109, 242, 255, 0.45);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.06));
 }
 
 .credits-summary::-webkit-details-marker {
@@ -620,14 +637,15 @@ textarea {
 }
 
 .credits-summary::after {
-  content: "+";
-  font-size: 1.4rem;
+  content: "▾";
+  font-size: 1.1rem;
   line-height: 1;
   color: var(--accent-2);
+  transition: transform 220ms ease;
 }
 
 .credits-dropdown[open] .credits-summary::after {
-  content: "-";
+  transform: rotate(180deg);
 }
 
 .credits-summary__title {
@@ -643,14 +661,26 @@ textarea {
 
 .credits-list {
   max-width: var(--max-width);
-  margin: 1rem auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.1rem;
+  transition: max-height 420ms ease, opacity 260ms ease, margin-top 260ms ease;
+}
+
+.credits-dropdown[open] .credits-list {
+  margin-top: 1rem;
+  max-height: 2200px;
+  opacity: 1;
 }
 
 .credits-item {
   position: relative;
+  width: min(100%, 340px);
   padding: 1.25rem 1.2rem;
   border-radius: var(--radius);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));

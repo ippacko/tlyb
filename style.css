@@ -272,11 +272,13 @@ textarea {
 }
 
 .hero__logo {
-  width: 12.5%;
+  width: 37.5%;
   height: auto;
   filter: brightness(0) invert(1);
-  max-width: 200px;
+  max-width: 600px;
   display: block;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero__title {

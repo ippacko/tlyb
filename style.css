@@ -4,8 +4,8 @@
   --panel-2: rgba(255, 255, 255, 0.05);
   --text: #f3f4f6;
   --muted: rgba(243, 244, 246, 0.75);
-  --accent: #ff4b6e;
-  --accent-2: #6df2ff;
+  --accent: #ff1616;
+  --accent-2: #1c3382;
   --shadow: 0 18px 70px rgba(0, 0, 0, 0.65);
   --radius: 18px;
   --max-width: 1100px;
@@ -182,14 +182,14 @@ textarea {
 .socials a:focus-visible {
   transform: translateY(-2px) scale(1.05);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(109, 242, 255, 0.45),
-    0 0 28px rgba(255, 75, 110, 0.35);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 16px rgba(28, 51, 130, 0.45),
+    0 0 28px rgba(255, 22, 22, 0.35);
 }
 
 .socials a:hover img,
 .socials a:focus-visible img {
-  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(109, 242, 255, 0.85))
-    drop-shadow(0 0 14px rgba(255, 75, 110, 0.6));
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(28, 51, 130, 0.85))
+    drop-shadow(0 0 14px rgba(255, 22, 22, 0.6));
 }
 
 .menu-toggle {
@@ -313,7 +313,7 @@ textarea {
 .btn:hover,
 .btn:focus-visible {
   transform: translateY(-1px);
-  filter: drop-shadow(0 10px 24px rgba(255, 75, 110, 0.45));
+  filter: drop-shadow(0 10px 24px rgba(255, 22, 22, 0.45));
 }
 
 .btn--ghost {
@@ -556,7 +556,7 @@ textarea {
 }
 
 .carousel__button:focus-visible {
-  outline: 2px solid rgba(255, 75, 110, 0.75);
+  outline: 2px solid rgba(255, 22, 22, 0.75);
   outline-offset: 2px;
 }
 
@@ -586,7 +586,7 @@ textarea {
 }
 
 .carousel__indicator.is-selected {
-  background: rgba(255, 75, 110, 0.9);
+  background: rgba(255, 22, 22, 0.9);
   transform: scale(1.15);
 }
 
@@ -687,7 +687,7 @@ textarea {
 .credits-summary:hover,
 .credits-summary:focus-visible {
   transform: translateY(-1px);
-  border-color: rgba(109, 242, 255, 0.45);
+  border-color: rgba(28, 51, 130, 0.45);
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.06));
 }
 
@@ -765,7 +765,7 @@ textarea {
 .credits-item:hover {
   transform: translateY(-2px);
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.04));
-  border-color: rgba(255, 75, 110, 0.35);
+  border-color: rgba(255, 22, 22, 0.35);
 }
 
 .credits-info h3 {
@@ -801,14 +801,14 @@ textarea {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  color: #071016;
+  color: #f3f4f6;
   font-weight: 600;
   font-size: 0.88rem;
   letter-spacing: 0.02em;
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent-2), #8bf8ff);
-  border: 1px solid rgba(109, 242, 255, 0.45);
+  background: linear-gradient(135deg, var(--accent-2), #2b4ab0);
+  border: 1px solid rgba(28, 51, 130, 0.45);
   transition: transform 150ms ease, filter 150ms ease, border-color 150ms ease;
   text-decoration: none;
 }
@@ -816,8 +816,8 @@ textarea {
 .credits-link:hover,
 .credits-link:focus-visible {
   transform: translateY(-1px);
-  filter: drop-shadow(0 8px 18px rgba(109, 242, 255, 0.35));
-  border-color: rgba(255, 75, 110, 0.35);
+  filter: drop-shadow(0 8px 18px rgba(28, 51, 130, 0.35));
+  border-color: rgba(255, 22, 22, 0.35);
 }
 
 .contact-form {
@@ -852,8 +852,8 @@ textarea {
 
 .form-row input:focus,
 .form-row textarea:focus {
-  border-color: rgba(255, 75, 110, 0.75);
-  box-shadow: 0 0 0 3px rgba(255, 75, 110, 0.18);
+  border-color: rgba(255, 22, 22, 0.75);
+  box-shadow: 0 0 0 3px rgba(255, 22, 22, 0.18);
 }
 
 .contact-status {

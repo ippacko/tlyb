@@ -1,67 +1,3 @@
-/* global requestAnimationFrame */
-
-const starCanvas = document.getElementById('starfield');
-const ctx = starCanvas.getContext('2d');
-const stars = [];
-const STAR_COUNT = 220;
-
-function resizeCanvas() {
-  starCanvas.width = window.innerWidth * window.devicePixelRatio;
-  starCanvas.height = window.innerHeight * window.devicePixelRatio;
-  starCanvas.style.width = `${window.innerWidth}px`;
-  starCanvas.style.height = `${window.innerHeight}px`;
-
-  // Reset any previous transforms so scaling does not compound
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-}
-
-function createStars() {
-  stars.length = 0;
-  for (let i = 0; i < STAR_COUNT; i++) {
-    stars.push({
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      radius: Math.random() * 1.4 + 0.2,
-      speed: Math.random() * 0.05 + 0.01,
-      twinkle: Math.random() * 0.6 + 0.4,
-    });
-  }
-}
-
-function drawStars(frame) {
-  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-  stars.forEach((star, index) => {
-    const twinkle = Math.sin((frame + index * 7) / 30) * 0.25 + 0.75;
-    const alpha = Math.min(1, Math.max(0.3, star.twinkle * twinkle));
-
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-    ctx.fill();
-
-    star.y += star.speed;
-    if (star.y > window.innerHeight + 10) {
-      star.y = -10;
-      star.x = Math.random() * window.innerWidth;
-    }
-  });
-
-  requestAnimationFrame(drawStars);
-}
-
-function initStarfield() {
-  resizeCanvas();
-  createStars();
-  requestAnimationFrame(drawStars);
-}
-
-window.addEventListener('resize', () => {
-  resizeCanvas();
-  createStars();
-});
-
 /* Mini carousel */
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track?.children || []);
@@ -176,5 +112,4 @@ if (contactForm && contactStatus) {
   });
 }
 
-initStarfield();
 setupCarousel();

@@ -43,15 +43,6 @@ textarea {
   font-family: inherit;
 }
 
-/* Canvas background */
-#starfield {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -74,12 +65,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-}
-
-.logo {
-  width: 42px;
-  height: auto;
-  display: block;
 }
 
 .brand-text {
@@ -184,6 +169,14 @@ textarea {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   letter-spacing: -0.03em;
   margin: 0;
+}
+
+.hero__logo {
+  width: min(100%, 700px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: invert(1);
 }
 
 .hero__subtitle {

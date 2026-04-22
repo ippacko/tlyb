@@ -391,6 +391,7 @@ textarea {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  min-height: 600px;
 }
 
 .carousel__track {
@@ -565,6 +566,7 @@ textarea {
   border-left: 4px solid var(--accent);
   background: rgba(255, 255, 255, 0.04);
   border-radius: 8px;
+  font-style: italic;
 }
 
 .press-quote blockquote p {

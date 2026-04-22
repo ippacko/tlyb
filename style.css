@@ -42,7 +42,7 @@ body::before {
     url("orange logo.png");
   background-size: 220px auto, 300px auto;
   background-repeat: repeat, repeat;
-  background-position: 0 0, 140px 0;
+  background-position: center 0, calc(50% + 110px) 0;
   background-blend-mode: normal, soft-light;
   filter: none;
 }
@@ -481,7 +481,7 @@ textarea {
 }
 
 .carousel__slide {
-  background-image: url("ahetobleh.png");
+  background-image: url("justin.png");
 }
 
 .carousel__slide:nth-child(2) {

@@ -53,34 +53,8 @@ const parallaxLogo = document.querySelector('.parallax-logo');
 function setupParallaxLogo() {
   if (!parallaxLogo) return;
 
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) {
-    parallaxLogo.style.setProperty('--parallax-y', '0px');
-    return;
-  }
-
-  let ticking = false;
-
-  const update = () => {
-    const y = window.scrollY * 0.08;
-    parallaxLogo.style.setProperty('--parallax-y', `${y}px`);
-    ticking = false;
-  };
-
-  update();
-
-  window.addEventListener(
-    'scroll',
-    () => {
-      if (!ticking) {
-        requestAnimationFrame(update);
-        ticking = true;
-      }
-    },
-    { passive: true }
-  );
-
-  window.addEventListener('resize', update);
+  // Keep the logo fixed in the background while content scrolls over it.
+  parallaxLogo.style.transform = 'translate3d(-50%, -50%, 0)';
 }
 
 /* Mobile nav toggle */

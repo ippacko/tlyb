@@ -270,9 +270,9 @@ textarea {
   margin: 0 auto;
   padding: 1.6rem 1.5rem;
   border-radius: 20px;
-  background: rgba(6, 6, 11, 0.36);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
   position: relative;
   z-index: 1;
 }
@@ -417,17 +417,20 @@ textarea {
 .credits-dropdown::before {
   content: "";
   position: absolute;
-  inset: -14px;
+  inset: -24px;
   z-index: -1;
   pointer-events: none;
-  background: rgba(7, 8, 14, 0.26);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px) saturate(1.1);
-  -webkit-backdrop-filter: blur(8px) saturate(1.1);
+  background: rgba(7, 8, 14, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
   clip-path: polygon(2% 8%, 8% 3%, 17% 6%, 27% 2%, 38% 5%, 49% 1%, 61% 4%, 73% 2%, 84% 6%, 95% 3%,
       98% 13%, 96% 24%, 99% 36%, 95% 48%, 98% 61%, 94% 73%, 97% 86%, 91% 95%, 79% 97%, 68% 94%,
       56% 98%, 45% 95%, 33% 97%, 22% 93%, 11% 96%, 3% 90%, 1% 78%, 4% 66%, 1% 53%, 5% 42%,
       2% 29%, 6% 18%);
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 45%, rgba(0, 0, 0, 0.35) 70%, transparent 92%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 45%, rgba(0, 0, 0, 0.35) 70%, transparent 92%);
+  filter: blur(6px);
 }
 
 .panel__inner::after,
@@ -440,11 +443,11 @@ textarea {
 .credits-dropdown::after {
   content: "";
   position: absolute;
-  inset: -28px;
+  inset: -46px;
   z-index: -2;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, rgba(7, 8, 14, 0.24) 0%, rgba(7, 8, 14, 0.12) 46%, transparent 86%);
-  filter: blur(13px);
+  background: radial-gradient(ellipse at center, rgba(7, 8, 14, 0.2) 0%, rgba(7, 8, 14, 0.07) 48%, transparent 96%);
+  filter: blur(22px);
 }
 
 .fade-in {

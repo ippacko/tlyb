@@ -123,5 +123,112 @@ if (contactForm && contactStatus) {
   });
 }
 
+/* Credits dropdown smooth animation */
+function setupCreditsDropdown() {
+  const dropdown = document.querySelector('.credits-dropdown');
+  const creditsList = dropdown?.querySelector('.credits-list');
+
+  if (!dropdown || !creditsList) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const DURATION_MS = 380;
+  const EASING = 'cubic-bezier(0.22, 1, 0.36, 1)';
+  let isAnimating = false;
+
+  function setOpenVisualState(isOpen) {
+    creditsList.style.opacity = isOpen ? '1' : '0';
+    creditsList.style.marginTop = isOpen ? '1rem' : '0';
+  }
+
+  if (prefersReducedMotion) {
+    if (dropdown.open) {
+      creditsList.style.height = 'auto';
+      setOpenVisualState(true);
+    } else {
+      creditsList.style.height = '0px';
+      setOpenVisualState(false);
+    }
+    return;
+  }
+
+  if (dropdown.open) {
+    creditsList.style.height = 'auto';
+    setOpenVisualState(true);
+  } else {
+    creditsList.style.height = '0px';
+    setOpenVisualState(false);
+  }
+
+  function expand() {
+    isAnimating = true;
+    dropdown.open = true;
+
+    setOpenVisualState(true);
+    creditsList.style.overflow = 'hidden';
+    creditsList.style.height = '0px';
+
+    requestAnimationFrame(() => {
+      const targetHeight = creditsList.scrollHeight;
+      creditsList.style.transition = `height ${DURATION_MS}ms ${EASING}, opacity 260ms ease, margin-top 260ms ease`;
+      creditsList.style.height = `${targetHeight}px`;
+    });
+
+    function onExpandEnd(event) {
+      if (event.propertyName !== 'height') return;
+      creditsList.style.transition = '';
+      creditsList.style.height = 'auto';
+      isAnimating = false;
+      creditsList.removeEventListener('transitionend', onExpandEnd);
+    }
+
+    creditsList.addEventListener('transitionend', onExpandEnd);
+  }
+
+  function collapse() {
+    isAnimating = true;
+
+    const startHeight = creditsList.scrollHeight;
+    creditsList.style.height = `${startHeight}px`;
+    creditsList.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+      creditsList.style.transition = `height ${DURATION_MS}ms ${EASING}, opacity 260ms ease, margin-top 260ms ease`;
+      setOpenVisualState(false);
+      creditsList.style.height = '0px';
+    });
+
+    function onCollapseEnd(event) {
+      if (event.propertyName !== 'height') return;
+      dropdown.open = false;
+      creditsList.style.transition = '';
+      isAnimating = false;
+      creditsList.removeEventListener('transitionend', onCollapseEnd);
+    }
+
+    creditsList.addEventListener('transitionend', onCollapseEnd);
+  }
+
+  dropdown.addEventListener('click', (event) => {
+    const summary = event.target.closest('summary');
+    if (!summary || !dropdown.contains(summary)) return;
+
+    event.preventDefault();
+    if (isAnimating) return;
+
+    if (dropdown.open) {
+      collapse();
+    } else {
+      expand();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (dropdown.open && !isAnimating) {
+      creditsList.style.height = 'auto';
+    }
+  });
+}
+
 setupCarousel();
 setupParallaxLogo();
+setupCreditsDropdown();
